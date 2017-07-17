@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.adity.invoicemaker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".signup" />
+        <activity
+            android:name=".splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NavigationDrawer"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BankDetails"
+            android:label="Bank Details"
+            />
+        <activity
+            android:name=".AddItem"
+            android:label="Add Item"
+            android:parentActivityName=".InvoiceGenerate"/>
+
+        <activty
+            android:name=".InvoiceGen"
+            android:label="Invoice" />
+
+        <activity
+            android:name=".InvoiceGenerate"
+            android:label="Invoice"
+            android:parentActivityName=".typesofinvoice"/>
+        <activity android:name=".ClientDetails"
+            android:label="Vendor Details"
+
+            android:parentActivityName=".InvoiceGenerate"/>
+        <activity
+            android:name=".typesofinvoice"
+            android:parentActivityName=".NavigationDrawer"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".OTPCheck">
+
+        </activity>
+        <activity
+            android:name=".bankDetailsInvo"
+            android:label="@string/title_activity_bank_details_invo"
+            android:parentActivityName=".InvoiceGenerate"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".pdfreader"/>
+    </application>
+
+</manifest>
